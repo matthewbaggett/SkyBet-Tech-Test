@@ -1,6 +1,6 @@
 <?php
 require_once("../lib/bootstrap.php"); 
-$view['people'] = people::get_instance()->get_people();
+require_once("../controllers/index.php")
 ?>
 <html>
 	<head>
