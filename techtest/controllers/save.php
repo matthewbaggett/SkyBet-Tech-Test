@@ -18,5 +18,6 @@ foreach($_POST['firstname'] as $key => $firstname){
 people::get_instance()
 ->set_people($new_people)
 ->save();
-
+if(!isset($_GET['ajax'])){
 header("Location: index.php");
+}
