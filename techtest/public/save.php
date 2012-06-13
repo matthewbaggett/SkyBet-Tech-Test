@@ -12,7 +12,7 @@ foreach($_POST['firstname'] as $key => $firstname){
 	$new_person = person::factory()
 		->setFirstname($firstname)
 		->setSurname($surname)
-		->setJob($job);
+		->setJobTitle($job);
 	if($new_person->isValid()){
 		$new_people[] = $new_person;
 	}

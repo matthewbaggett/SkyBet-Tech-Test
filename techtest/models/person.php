@@ -3,7 +3,7 @@
 class person{
 	private $firstname;
 	private $surname;
-	private $job;
+	private $job_title;
 	
 	public function factory(){
 		return new person();
@@ -14,8 +14,8 @@ class person{
 	public function getSurname(){
 		return $this->surname;
 	}
-	public function getJob(){
-		return $this->job;
+	public function getJobTitle(){
+		return $this->job_title;
 	}
 	public function setFirstname($firstname){
 		$this->firstname = $firstname;
@@ -25,13 +25,13 @@ class person{
 		$this->surname = $surname;
 		return $this;
 	}
-	public function setJob($job){
-		$this->job = $job;
+	public function setJobTitle($job_title){
+		$this->job_title = $job_title;
 		return $this;
 	}
 	
 	public function isValid(){
-		if(empty($this->firstname) && empty($this->surname) && empty($this->job)){
+		if(empty($this->firstname) && empty($this->surname) && empty($this->job_title)){
 			return FALSE;
 		}
 		return TRUE;

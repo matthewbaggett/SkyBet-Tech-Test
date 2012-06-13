@@ -19,7 +19,7 @@ $view['people'] = people::get_instance()->get_people();
 					<tr>
 						<td><input type="text" name="firstname[<?=$key?>]" id="firstname[<?=$key?>]" value="<?=$person->getFirstname()?>" /></td>
 						<td><input type="text" name="lastname[<?=$key?>]" id="lastname[<?=$key?>]" value="<?=$person->getSurname()?>" /></td>
-						<td><input type="text" name="job[<?=$key?>]" id="job[<?=$key?>]" value="<?=$person->getJob()?>" /></td>
+						<td><input type="text" name="job[<?=$key?>]" id="job[<?=$key?>]" value="<?=$person->getJobTitle()?>" /></td>
 					</tr>
 				<?php endforeach; ?>
 				<tr>
