@@ -30,6 +30,14 @@ class person{
 		return $this;
 	}
 	
+	public function __toArray(){
+		return array(
+				'firstname' => $this->getFirstname(),
+				'surname' => $this->getSurname(),
+				'job_title' => $this->getJobTitle()
+		);
+	}
+	
 	public function isValid(){
 		if(empty($this->firstname) && empty($this->surname) && empty($this->job_title)){
 			return FALSE;
